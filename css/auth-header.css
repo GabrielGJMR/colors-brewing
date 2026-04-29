@@ -484,3 +484,48 @@
     border-radius: 12px;
   }
 }
+
+/* =============================================
+   RESPONSIVE MÓVIL — Auth Header
+   ============================================= */
+
+@media (max-width: 900px) {
+  /* Ocultar texto del botón login, solo ícono */
+  .btn-login span {
+    display: none;
+  }
+
+  .btn-login {
+    padding: 6px 10px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  /* Usuario: ocultar nombre y chevron, solo avatar */
+  .user-display span,
+  .user-display .chevron {
+    display: none;
+  }
+
+  .user-display {
+    padding: 3px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+  }
+
+  .user-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.85rem;
+  }
+
+  /* Dropdown hacia la izquierda para no salirse de pantalla */
+  .user-dropdown {
+    right: 0;
+    left: auto;
+  }
+}
