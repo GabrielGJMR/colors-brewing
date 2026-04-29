@@ -20,6 +20,9 @@
     />
 
     <link rel="stylesheet" href="../css/main.css" />
+
+    <!-- 🔐 AUTH HEADER -->
+    <link rel="stylesheet" href="../css/auth-header.css" />
   </head>
 
   <body>
@@ -127,6 +130,12 @@
             </div>
           </div>
 
+          <!-- 🔐 SLOT AUTH -->
+          <div
+            id="authHeaderSlot"
+            style="display: flex; align-items: center; margin-left: 8px"
+          ></div>
+
           <button
             class="menu-toggle"
             id="menuToggle"
@@ -193,7 +202,6 @@
             style="text-transform: uppercase"
           ></button>
 
-          <!-- 🔥 TÍTULO CLICKEABLE -->
           <a
             href="nuestra_carta.html"
             class="mobile-title-link"
@@ -343,6 +351,8 @@
       </section>
     </main>
 
+    <!-- 🔐 AUTH + scripts -->
+    <script type="module" src="../js/auth-header.js"></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
   </body>
