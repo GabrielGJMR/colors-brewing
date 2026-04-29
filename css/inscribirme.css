@@ -1,0 +1,502 @@
+/* ========================================= 
+   INSCRIBIRME PAGE
+========================================= */
+
+/* =========================================
+   BASE LAYOUT
+========================================= */
+
+.signup-main {
+  padding-top: var(--header-h);
+  padding-bottom: 100px;
+}
+
+.gold {
+  color: var(--primary);
+}
+
+/* =========================================
+   INTRO SECTION
+========================================= */
+
+.signup-intro {
+  padding: 8rem 1rem 4rem;
+  text-align: center;
+}
+
+.signup-intro-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.intro-logo {
+  width: 160px;
+  margin: 0 auto 2rem;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(196, 154, 44, 0.4));
+}
+
+.signup-intro h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+}
+
+.signup-intro p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+/* =========================================
+   GRID LAYOUT
+========================================= */
+
+.signup-wrapper {
+  padding: 4rem 1rem 6rem;
+}
+
+.signup-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .signup-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.signup-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.signup-benefits h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.benefit-text {
+  flex: 1;
+}
+
+.benefit-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-benefits li {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+/* =========================================
+   SIGNUP CARD
+========================================= */
+
+.signup-card {
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.signup-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+.signup-form input,
+.signup-form select {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #1a1a1a;
+  color: #fff;
+  font-family: "Baloo 2", sans-serif;
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(196, 154, 44, 0.3);
+}
+
+.input-error {
+  border-color: #ff4d4d !important;
+}
+
+/* =========================================
+   TERMS
+========================================= */
+
+.terms {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.signup-btn {
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* =========================================
+   SUCCESS OVERLAY (PRO VERSION)
+========================================= */
+
+.success-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+/* Estado activo controlado por JS */
+.success-screen.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.success-card {
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.success-screen.active .success-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.success-card h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.success-btn {
+  display: block;
+  margin: 20px 0;
+  padding: 12px;
+  background: var(--primary);
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.success-btn:hover {
+  transform: scale(1.05);
+}
+
+.back-btn-web {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* =========================================
+   AFTER SUBMIT (MANTENIDO)
+========================================= */
+
+#afterSubmit {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .signup-intro {
+    padding: 5rem 1.2rem 2rem;
+  }
+
+  .intro-logo {
+    width: 110px;
+    margin-bottom: 1.5rem;
+  }
+
+  .signup-intro h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .signup-intro p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .signup-wrapper {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .signup-grid {
+    gap: 2rem;
+  }
+
+  .benefit-item {
+    gap: 1rem;
+  }
+
+  .benefit-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .signup-card {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .signup-form {
+    gap: 1.2rem;
+  }
+
+  .signup-form input,
+  .signup-form select {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .signup-btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+.form-hidden {
+  display: none;
+}
+
+/* ===============================
+   AUTH SECTION - FIREBASE LOGIN
+================================= */
+
+.auth-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+.auth-card p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-bottom: 1.2rem;
+}
+
+.btn-google:hover {
+  opacity: 0.9;
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.85rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.auth-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.auth-tab.active {
+  background: var(--primary);
+  color: #000;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: "Baloo 2", sans-serif;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.auth-form input:focus {
+  border-color: var(--primary);
+}
+
+.auth-error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  min-height: 1.2rem;
+}
+
+.hidden {
+  display: none !important;
+}

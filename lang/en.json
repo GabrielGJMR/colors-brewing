@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "our_menu": "Our Menu",
+    "experiences": "Experiences",
+    "membership": "Membership",
+    "location": "Location",
+    "contact": "Contact"
+  },
+
+  "mobile": {
+    "back": "← Back"
+  },
+
+  "menu": {
+    "items": {
+      "menu": "Menu",
+      "craft_beers": "Craft Beers",
+      "special_editions": "Special Editions",
+      "shots": "Shots",
+      "merch": "Merch"
+    }
+  },
+
+  "experiences": {
+    "items": {
+      "brew_tours": "Brew Tours",
+      "events": "Events",
+      "reservations": "Reservations"
+    }
+  },
+
+  "membership": {
+    "items": {
+      "benefits": "Benefits",
+      "club": "Colors Club",
+      "join": "Join Now"
+    }
+  },
+
+  "carta": {
+    "hero": {
+      "title": "Our Menu",
+      "subtitle": "Explore our beers and exclusive editions"
+    },
+    "section": {
+      "discover": "Discover"
+    },
+    "cards": {
+      "menu": {
+        "title": "Menu",
+        "text": "Explore our complete menu.",
+        "button": "View Menu"
+      },
+      "beers": {
+        "title": "Craft Beers",
+        "text": "Classic, special and experimental.",
+        "button": "Explore"
+      },
+      "special": {
+        "title": "Special Editions",
+        "text": "Limited productions and collaborations.",
+        "button": "View Editions"
+      }
+    }
+  }
+}

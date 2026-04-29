@@ -1,0 +1,443 @@
+/* ==============================
+   HERO
+================================= */
+
+.exp-hero {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.exp-hero-content h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.exp-hero-content p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ==============================
+   INTRO
+================================= */
+
+.exp-intro {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.exp-intro h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.exp-intro p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ==============================
+   TOURS
+================================= */
+
+.exp-tours {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.exp-tours .section-title {
+  margin-bottom: 3rem;
+}
+
+.tours-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.tour-card {
+  background: var(--dark-light);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  text-align: left;
+}
+
+.tour-card:nth-child(1) { animation-delay: 0.1s; }
+.tour-card:nth-child(2) { animation-delay: 0.2s; }
+.tour-card:nth-child(3) { animation-delay: 0.3s; }
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.tour-card.featured {
+  border: 1px solid var(--primary);
+}
+
+.tour-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tour-body {
+  padding: 1.5rem;
+}
+
+.tour-tag {
+  display: inline-block;
+  background: var(--primary);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+.tour-body h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.tour-body p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tour-includes {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.tour-includes li {
+  padding: 0.3rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+}
+
+.tour-includes li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ==============================
+   BOTÓN GENERAL
+================================= */
+
+.exp-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+  font-family: "Baloo 2", sans-serif;
+}
+
+.exp-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* ==============================
+   EVENTOS
+================================= */
+
+.exp-eventos {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.exp-eventos .section-title {
+  margin-bottom: 3rem;
+}
+
+.eventos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.evento-card {
+  background: var(--dark-light);
+  border-radius: 18px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  text-align: left;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.evento-card:nth-child(1) { animation-delay: 0.1s; }
+.evento-card:nth-child(2) { animation-delay: 0.2s; }
+.evento-card:nth-child(3) { animation-delay: 0.3s; }
+.evento-card:nth-child(4) { animation-delay: 0.4s; }
+
+.evento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.evento-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #000;
+  border-radius: 12px;
+  min-width: 60px;
+  padding: 0.75rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.evento-day {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.evento-month {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.evento-info h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.evento-info p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.evento-hora {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ==============================
+   RESERVAS
+================================= */
+
+.exp-reservas {
+  padding: 5rem 1.5rem;
+}
+
+.reservas-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reservas-info h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.reservas-info p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.reservas-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.reservas-list li {
+  padding-left: 1.4rem;
+  position: relative;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+.reservas-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* FORM */
+
+.reservas-form {
+  background: var(--dark-light);
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--text-light);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+}
+
+.form-group select option {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-group input.input-error,
+.form-group select.input-error {
+  border-color: #e05252;
+}
+
+.submit-btn {
+  width: 100%;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+/* ==============================
+   RESPONSIVE 900px
+================================= */
+
+@media (min-width: 900px) {
+  .exp-hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .tours-grid {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .tour-card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tour-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tour-includes {
+    flex: 1;
+  }
+
+  .eventos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .reservas-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .reservas-info {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .reservas-form {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .form-group.full-width,
+  .submit-btn {
+    grid-column: 1 / -1;
+  }
+}

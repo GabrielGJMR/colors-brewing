@@ -1,0 +1,85 @@
+/* ========================================= */
+/*              BASE STYLES                 */
+/* ========================================= */
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ Scroll base (sin eliminar nada) */
+html,
+body {
+  height: 100%;
+}
+
+/* VARIABLES */
+
+:root {
+  --primary: #c49a2c;
+  --dark: #111111;
+  --dark-light: #1a1a1a;
+  --text-light: #ffffff;
+  --radius: 8px;
+  --transition: 0.3s ease;
+}
+
+/* BODY */
+
+body {
+  font-family: "Baloo 2", sans-serif;
+  line-height: 1.6;
+  color: var(--text-light);
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("../img/fondo.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* 🔥 ESTO ES LO NUEVO */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ELEMENTOS GENERALES */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+header .container {
+  width: 100%;
+  max-width: 100%; /* 🔥 clave */
+  padding: 0 40px; /* 👈 espacio elegante */
+}
+
+main {
+  flex: 1;
+}

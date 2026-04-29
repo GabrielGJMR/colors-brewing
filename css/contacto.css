@@ -1,0 +1,251 @@
+/* =========================================
+   CONTACTO - COLORS BREWING
+========================================= */
+
+.contact-main {
+  padding-top: var(--header-h);
+  padding-bottom: 100px;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.contact-hero {
+  text-align: center;
+  padding: 80px 20px 50px;
+}
+
+.contact-hero h1 {
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL (FIX IMPORTANTE)
+========================================= */
+
+.contact-section {
+  margin-top: -40px; /* 🔥 NUEVO: efecto elegante */
+  padding: 80px 20px 60px;
+}
+
+/* =========================================
+   GRID (FIX DE BALANCE)
+========================================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  max-width: 1100px; /* 🔥 NUEVO */
+  margin: auto;       /* 🔥 NUEVO */
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.contact-form-wrapper {
+  background: var(--dark-light);
+  border-radius: 18px;
+  padding: 25px; /* 🔥 AJUSTADO */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25); /* 🔥 MEJORADO */
+  transition: 0.3s;
+}
+
+.contact-form-wrapper:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.contact-form-wrapper h2 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* INPUTS */
+
+.contact-form .form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #111;
+  color: white;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 10px rgba(196,154,44,0.4);
+}
+
+/* BOTÓN (FIX IMPORTANTE) */
+
+.contact-btn {
+  margin-top: 15px;
+  width: fit-content; /* 🔥 NUEVO */
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(196,154,44,0.4);
+}
+
+/* MENSAJES */
+
+.form-error {
+  font-size: 0.8rem;
+  color: #ff5c5c;
+  margin-top: 4px;
+}
+
+.form-success {
+  margin-top: 15px;
+  color: #4caf50;
+  font-weight: bold;
+  display: none;
+}
+
+/* =========================================
+   INFO
+========================================= */
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* 🔥 AJUSTADO */
+}
+
+.contact-info-block {
+  background: var(--dark-light);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25); /* 🔥 MEJORADO */
+  transition: 0.3s;
+}
+
+.contact-info-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.contact-info-block h2 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+/* ITEMS */
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.contact-icon {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.contact-info-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info-item a:hover {
+  color: var(--primary);
+}
+
+/* =========================================
+   HORARIOS
+========================================= */
+
+.contact-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  padding-bottom: 5px;
+}
+
+/* =========================================
+   REDES
+========================================= */
+
+.contact-socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 8px 14px;
+  background: #111;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: black;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-hero {
+    padding: 60px 20px 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+}

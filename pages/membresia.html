@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membresía | Colors Brewing</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../icon/colors_logo.png?v=2"
+    />
+    <link rel="shortcut icon" href="../icon/colors_logo.png?v=2" />
+
+    <!-- 🔥 GOOGLE FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../icon/colors_logo.png" alt="Colors Brewing Logo" />
+          </a>
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav">
+          <a href="../index.html" data-i18n="nav.home"></a>
+
+          <div class="dropdown">
+            <a
+              href="nuestra_carta.html"
+              class="dropdown-toggle"
+              data-i18n="nav.our_menu"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="menu.html" data-i18n="menu.items.menu"></a>
+              <a
+                href="cervezas.html#artesanales"
+                data-i18n="menu.items.craft_beers"
+              ></a>
+              <a
+                href="cervezas.html#especiales"
+                data-i18n="menu.items.special_editions"
+              ></a>
+              <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
+              <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a
+              href="experiencias.html"
+              class="dropdown-toggle"
+              data-i18n="nav.experiences"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="../experiencias.html#tours"
+                data-i18n="experiences.items.brew_tours"
+              ></a>
+              <a
+                href="../experiencias.html#eventos"
+                data-i18n="experiences.items.events"
+              ></a>
+              <a
+                href="../experiencias.html#reservas"
+                data-i18n="experiences.items.reservations"
+              ></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a
+              href="membresia.html"
+              class="dropdown-toggle"
+              data-i18n="nav.membership"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="#beneficios" data-i18n="membership.items.benefits"></a>
+              <a href="#club" data-i18n="membership.items.club"></a>
+              <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+            </div>
+          </div>
+
+          <a href="../ubicacion.html" data-i18n="nav.location"></a>
+          <a href="../contacto.html" data-i18n="nav.contact"></a>
+        </nav>
+
+        <div class="header-right">
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="langBtn">
+              <img src="../icon/bandera-es.png" alt="" />
+              ES
+            </button>
+
+            <div class="lang-menu">
+              <div data-lang="es"><img src="../icon/bandera-es.png" /> ES</div>
+              <div data-lang="en"><img src="../icon/bandera-en.png" /> EN</div>
+            </div>
+          </div>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU (CORREGIDO Y COMPLETO) -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <!-- PANTALLA PRINCIPAL -->
+      <div class="mobile-screen active" id="mainScreen">
+        <a href="../index.html" data-i18n="nav.home"></a>
+
+        <button
+          class="mobile-link"
+          data-target="menuScreen"
+          data-i18n="nav.our_menu"
+        ></button>
+
+        <button
+          class="mobile-link"
+          data-target="expScreen"
+          data-i18n="nav.experiences"
+        ></button>
+
+        <button
+          class="mobile-link"
+          data-target="membershipScreen"
+          data-i18n="nav.membership"
+        ></button>
+
+        <a href="../pages/ubicacion.html" data-i18n="nav.location"></a>
+        <a href="../contacto.html" data-i18n="nav.contact"></a>
+      </div>
+
+      <!-- SUBPANTALLA NUESTRA CARTA -->
+      <div class="mobile-screen" id="menuScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="nuestra_carta.html"
+            class="mobile-title-link"
+            data-i18n="nav.our_menu"
+          ></a>
+        </div>
+
+        <a href="menu.html" data-i18n="menu.items.menu"></a>
+        <a
+          href="cervezas.html#artesanales"
+          data-i18n="menu.items.craft_beers"
+        ></a>
+        <a
+          href="cervezas.html#especiales"
+          data-i18n="menu.items.special_editions"
+        ></a>
+        <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
+        <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+      </div>
+
+      <!-- SUBPANTALLA EXPERIENCIAS -->
+      <div class="mobile-screen" id="expScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="../experiencias.html"
+            class="mobile-title-link"
+            data-i18n="nav.experiences"
+          ></a>
+        </div>
+
+        <a
+          href="../experiencias.html#tours"
+          data-i18n="experiences.items.brew_tours"
+        ></a>
+        <a
+          href="../experiencias.html#eventos"
+          data-i18n="experiences.items.events"
+        ></a>
+        <a
+          href="../experiencias.html#reservas"
+          data-i18n="experiences.items.reservations"
+        ></a>
+      </div>
+
+      <!-- SUBPANTALLA MEMBRESÍA (TUYA ORIGINAL) -->
+      <div class="mobile-screen" id="membershipScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="membresia.html"
+            class="mobile-title-link"
+            data-i18n="nav.membership"
+          ></a>
+        </div>
+
+        <a href="#beneficios" data-i18n="membership.items.benefits"></a>
+        <a href="#club" data-i18n="membership.items.club"></a>
+        <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+      <!-- HERO -->
+      <section class="membership-hero">
+        <div class="membership-hero-content">
+          <h1>MEMBRESÍA</h1>
+          <p>
+            Únete al club exclusivo de Colors Brewing y vive experiencias únicas
+            alrededor de nuestra cerveza artesanal.
+          </p>
+        </div>
+      </section>
+
+      <!-- ¿QUÉ ES LA MEMBRESÍA? -->
+      <section class="membership-about">
+        <div class="membership-about-content">
+          <h2>¿Qué es la Membresía Colors?</h2>
+          <p>
+            La Membresía Colors es una experiencia diseñada para quienes
+            disfrutan la cerveza artesanal y quieren formar parte de algo más
+            grande.
+          </p>
+          <p>
+            Como miembro, obtienes acceso anticipado a lanzamientos, eventos
+            privados, descuentos exclusivos y beneficios especiales durante todo
+            el año.
+          </p>
+        </div>
+      </section>
+
+      <!-- LO QUE INCLUYE -->
+      <section class="membership-perks">
+        <h2 class="section-title">Lo que incluye tu membresía</h2>
+
+        <div class="perks-grid">
+          <div class="perk-card">
+            <img src="../img/beer-exclusive.jpg" alt="Cervezas exclusivas" />
+            <h3>Cervezas Exclusivas</h3>
+            <p>Acceso anticipado a ediciones limitadas.</p>
+          </div>
+
+          <div class="perk-card">
+            <img src="../img/events.jpg" alt="Eventos privados" />
+            <h3>Eventos Privados</h3>
+            <p>Invitaciones a catas y experiencias especiales.</p>
+          </div>
+
+          <div class="perk-card">
+            <img src="../img/merch.jpg" alt="Merchandising oficial" />
+            <h3>Merch Oficial</h3>
+            <p>Productos exclusivos solo para miembros.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFICIOS -->
+      <section class="membership-benefits" id="beneficios">
+        <h2 class="section-title">Beneficios Exclusivos</h2>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h3>Descuentos Especiales</h3>
+            <p>Precios preferenciales en lanzamientos y eventos privados.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Acceso Anticipado</h3>
+            <p>Prueba nuevas recetas antes que nadie.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Eventos Privados</h3>
+            <p>Catas y experiencias diseñadas para miembros.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Regalos Anuales</h3>
+            <p>Merchandising exclusivo incluido en tu membresía.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLUB -->
+      <section class="membership-club" id="club">
+        <div class="club-image">
+          <img src="../img/copaprueba.jpg" alt="Club Colors Brewing" />
+        </div>
+
+        <div class="club-content">
+          <h2>El Club Colors</h2>
+          <p>
+            Nuestro club es una comunidad apasionada por la cerveza artesanal.
+          </p>
+          <p>
+            Forma parte de quienes viven la experiencia completa de Colors
+            Brewing.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="membership-final-cta" id="inscribirme">
+        <h2>Hazte miembro hoy</h2>
+        <p>
+          Completa el formulario y comienza a disfrutar la experiencia Colors.
+        </p>
+        <a href="inscribirme.html" class="membership-btn">
+          INSCRIBIRME AHORA
+        </a>
+      </section>
+    </main>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

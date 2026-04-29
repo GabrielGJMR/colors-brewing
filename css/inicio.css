@@ -1,0 +1,373 @@
+/* ===============================
+   SOCIAL FOOTER (CENTRADO)
+================================ */
+
+.social-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: black;
+}
+
+/* ===============================
+   CONTENEDOR ICONOS
+================================ */
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+  box-shadow: none;
+}
+
+/* ===============================
+   BOTONES REDES
+================================ */
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   HOVER COLORES
+================================ */
+
+.containerOne:hover {
+  background-color: #d62976;
+}
+
+.containerTwo:hover {
+  background-color: #25f4ee;
+}
+
+.containerThree:hover {
+  background-color: #1877f2;
+}
+
+.containerFour:hover {
+  background-color: #25d366;
+}
+
+/* ===============================
+   CLICK
+================================ */
+
+.socialContainer:active {
+  transform: scale(0.9);
+}
+
+/* ===============================
+   ICONOS
+================================ */
+
+.socialSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.socialSvg path {
+  fill: #fff;
+}
+
+/* ===============================
+   ANIMACION
+================================ */
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   SECCION QUIENES SOMOS / BREWERY
+========================================= */
+
+.brewery-info {
+  padding: 120px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.brewery-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+/* alterna imagen derecha */
+
+.brewery-row.reverse {
+  direction: rtl;
+}
+
+.brewery-row.reverse .brewery-text {
+  direction: ltr;
+}
+
+/* imagen */
+
+.brewery-img img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* texto */
+
+.brewery-text h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.brewery-text p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   EXPERIENCIAS / TOURS
+========================================= */
+
+.tours-dark {
+  padding: 120px 40px;
+  background: transparent;
+  color: white;
+}
+
+.tours-dark__title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.tours-dark__subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+.tours-dark__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   CARDS
+================================ */
+
+.tour-dark__card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.tour-dark__card:hover {
+  transform: translateY(-8px);
+}
+
+/* ===============================
+   IMAGEN
+================================ */
+
+.tour-dark__image {
+  position: relative;
+}
+
+.tour-dark__image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===============================
+   BADGE
+================================ */
+
+.tour-dark__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d4a017;
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+/* ===============================
+   CONTENIDO
+================================ */
+
+.tour-dark__content {
+  padding: 20px;
+}
+
+.tour-dark__content h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.tour-dark__content p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   BOTON
+================================ */
+
+.tour-dark__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #d4a017;
+  color: #d4a017;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.tour-dark__btn:hover {
+  background: #d4a017;
+  color: black;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  .brewery-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .brewery-row.reverse {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tours-dark {
+    padding: 80px 20px;
+  }
+
+  .tours-dark__title {
+    font-size: 30px;
+  }
+
+  .tour-dark__image img {
+    height: 180px;
+  }
+}
+/* ===============================
+   BOTON COMO LLEGAR
+================================ */
+
+.button {
+  width: 165px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  background-color: rgba(238, 238, 238, 0.616);
+  border-radius: 30px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  color: rgb(255, 253, 253);
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+  padding-left: 8px;
+  transition: 0.5s;
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+}
+
+.svgIcon {
+  height: 25px;
+  transition: 1.5s;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.897);
+  color: black;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.button:hover .svgIcon {
+  transform: rotate(250deg);
+}
+
+/* ===============================
+   POSICION BOTON COMO LLEGAR
+================================ */
+
+.brewery-text .button {
+  margin-top: 25px;
+}
+
+/* PC - botón debajo del texto */
+
+@media (min-width: 901px) {
+  .brewery-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* mejor que align-self */
+  }
+}
+
+/* MOBILE - botón centrado */
+
+@media (max-width: 900px) {
+  .brewery-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .brewery-text .button {
+    margin: 25px auto 0;
+  }
+}

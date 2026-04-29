@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestra Carta | Colors Brewing</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../icon/colors_logo.png?v=2"
+    />
+    <link rel="shortcut icon" href="../icon/colors_logo.png?v=2" />
+
+    <!-- 🔥 GOOGLE FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../icon/colors_logo.png" alt="Colors Brewing Logo" />
+          </a>
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav">
+          <a href="../index.html" data-i18n="nav.home"></a>
+
+          <!-- NUESTRA CARTA -->
+          <div class="dropdown">
+            <a
+              href="nuestra_carta.html"
+              class="dropdown-toggle"
+              data-i18n="nav.our_menu"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="menu.html" data-i18n="menu.items.menu"></a>
+              <a
+                href="cervezas.html#artesanales"
+                data-i18n="menu.items.craft_beers"
+              ></a>
+              <a
+                href="cervezas.html#especiales"
+                data-i18n="menu.items.special_editions"
+              ></a>
+              <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
+              <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+            </div>
+          </div>
+
+          <!-- EXPERIENCIAS -->
+          <div class="dropdown">
+            <a
+              href="experiencias.html"
+              class="dropdown-toggle"
+              data-i18n="nav.experiences"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="../experiencias.html#tours"
+                data-i18n="experiences.items.brew_tours"
+              ></a>
+              <a
+                href="../experiencias.html#eventos"
+                data-i18n="experiences.items.events"
+              ></a>
+              <a
+                href="../experiencias.html#reservas"
+                data-i18n="experiences.items.reservations"
+              ></a>
+            </div>
+          </div>
+
+          <!-- MEMBRESÍA -->
+          <div class="dropdown">
+            <a
+              href="membresia.html"
+              class="dropdown-toggle"
+              data-i18n="nav.membership"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="membresia.html#beneficios"
+                data-i18n="membership.items.benefits"
+              ></a>
+
+              <a
+                href="membresia.html#club"
+                data-i18n="membership.items.club"
+              ></a>
+
+              <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+            </div>
+          </div>
+
+          <a href="ubicacion.html" data-i18n="nav.location"></a>
+          <a href="contacto.html" data-i18n="nav.contact"></a>
+        </nav>
+
+        <!-- RIGHT SIDE -->
+        <div class="header-right">
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="langBtn">
+              <img src="../icon/bandera-es.png" alt="" />
+              ES
+            </button>
+
+            <div class="lang-menu">
+              <div data-lang="es"><img src="../icon/bandera-es.png" /> ES</div>
+              <div data-lang="en"><img src="../icon/bandera-en.png" /> EN</div>
+            </div>
+          </div>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU COMPLETO -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <!-- MAIN SCREEN -->
+      <div class="mobile-screen active" id="mainScreen">
+        <a
+          href="../index.html"
+          data-i18n="nav.home"
+          style="text-transform: uppercase"
+        ></a>
+
+        <button
+          class="mobile-link"
+          data-target="menuScreen"
+          data-i18n="nav.our_menu"
+          style="text-transform: uppercase"
+        ></button>
+        <button
+          class="mobile-link"
+          data-target="expScreen"
+          data-i18n="nav.experiences"
+          style="text-transform: uppercase"
+        ></button>
+        <button
+          class="mobile-link"
+          data-target="membershipScreen"
+          data-i18n="nav.membership"
+          style="text-transform: uppercase"
+        ></button>
+
+        <a
+          href="../ubicacion.html"
+          data-i18n="nav.location"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="../contacto.html"
+          data-i18n="nav.contact"
+          style="text-transform: uppercase"
+        ></a>
+      </div>
+
+      <!-- NUESTRA CARTA MOBILE -->
+      <div class="mobile-screen" id="menuScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+            style="text-transform: uppercase"
+          ></button>
+
+          <!-- 🔥 TÍTULO CLICKEABLE -->
+          <a
+            href="nuestra_carta.html"
+            class="mobile-title-link"
+            data-i18n="nav.our_menu"
+            style="text-transform: uppercase"
+          >
+          </a>
+        </div>
+
+        <a
+          href="menu.html"
+          data-i18n="menu.items.menu"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="cervezas.html#artesanales"
+          data-i18n="menu.items.craft_beers"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="cervezas.html#especiales"
+          data-i18n="menu.items.special_editions"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="cervezas.html#shots"
+          data-i18n="menu.items.shots"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="cervezas.html#merch"
+          data-i18n="menu.items.merch"
+          style="text-transform: uppercase"
+        ></a>
+      </div>
+
+      <!-- EXPERIENCIAS MOBILE -->
+      <div class="mobile-screen" id="expScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+            style="text-transform: uppercase"
+          ></button>
+
+          <a
+            href="../experiencias.html"
+            class="mobile-title-link"
+            data-i18n="nav.experiences"
+          ></a>
+        </div>
+
+        <a
+          href="../experiencias.html#tours"
+          data-i18n="experiences.items.brew_tours"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="../experiencias.html#eventos"
+          data-i18n="experiences.items.events"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="../experiencias.html#reservas"
+          data-i18n="experiences.items.reservations"
+          style="text-transform: uppercase"
+        ></a>
+      </div>
+
+      <!-- SUBPANTALLA MEMBRESÍA -->
+      <div class="mobile-screen" id="membershipScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="membresia.html"
+            class="mobile-title-link"
+            data-i18n="nav.membership"
+          ></a>
+        </div>
+
+        <a
+          href="membresia.html#beneficios"
+          data-i18n="membership.items.benefits"
+        ></a>
+
+        <a href="membresia.html#club" data-i18n="membership.items.club"></a>
+
+        <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+      <section class="carta-hero">
+        <div class="carta-hero-content">
+          <h1 data-i18n="carta.hero.title"></h1>
+          <p data-i18n="carta.hero.subtitle"></p>
+        </div>
+      </section>
+
+      <section class="carta-section">
+        <h2 class="section-title" data-i18n="carta.section.discover"></h2>
+
+        <div class="carta-slider">
+          <div class="carta-track">
+            <div class="carta-card">
+              <h3 data-i18n="carta.cards.menu.title"></h3>
+              <p data-i18n="carta.cards.menu.text"></p>
+              <a
+                href="menu.html"
+                class="carta-link"
+                data-i18n="carta.cards.menu.button"
+              ></a>
+            </div>
+
+            <div class="carta-card">
+              <h3 data-i18n="carta.cards.beers.title"></h3>
+              <p data-i18n="carta.cards.beers.text"></p>
+              <a
+                href="cervezas.html"
+                class="carta-link"
+                data-i18n="carta.cards.beers.button"
+              >
+              </a>
+            </div>
+
+            <div class="carta-card">
+              <h3 data-i18n="carta.cards.special.title"></h3>
+              <p data-i18n="carta.cards.special.text"></p>
+              <a
+                href="cervezas.html"
+                class="carta-link"
+                data-i18n="carta.cards.special.button"
+              >
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

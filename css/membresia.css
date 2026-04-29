@@ -1,0 +1,272 @@
+/* ==============================
+   HERO
+================================= */
+
+.membership-hero {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.membership-hero-content h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.membership-hero-content p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ==============================
+   ABOUT (Nueva sección)
+================================= */
+
+.membership-about {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.membership-about h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.membership-about p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ==============================
+   PERKS (Sección imágenes)
+================================= */
+
+.membership-perks {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.perks-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.perk-card {
+  background: var(--dark-light);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.perk-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.perk-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.perk-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.perk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.perk-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.perk-card h3 {
+  color: var(--primary);
+  margin: 1rem 0 0.5rem;
+}
+
+.perk-card p {
+  padding: 0 1rem 1.5rem;
+}
+
+/* ==============================
+   BENEFICIOS
+================================= */
+
+.membership-benefits {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.membership-benefits .section-title {
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: var(--dark-light);
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.benefit-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.benefit-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.benefit-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.benefit-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+}
+
+.benefit-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   CLUB
+================================= */
+
+.membership-club {
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.club-image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.club-content {
+  max-width: 600px;
+}
+
+.club-content h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.club-content p {
+  margin-bottom: 1rem;
+}
+
+/* ==============================
+   CTA FINAL
+================================= */
+
+.membership-final-cta {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.membership-final-cta h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.membership-final-cta p {
+  margin-bottom: 2rem;
+}
+
+/* Botón */
+
+.membership-btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.membership-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* ==============================
+   RESPONSIVE 900px
+================================= */
+
+@media (min-width: 900px) {
+  .membership-hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .benefits-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .benefit-card {
+    width: 45%;
+  }
+
+  .perks-grid {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .perk-card {
+    width: 30%;
+  }
+
+  .membership-club {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .club-image,
+  .club-content {
+    flex: 1;
+  }
+
+  .club-content {
+    padding-left: 3rem;
+  }
+}

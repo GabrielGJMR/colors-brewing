@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscribirme | Colors Brewing</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../icon/colors_logo.png?v=2"
+    />
+    <link rel="shortcut icon" href="../icon/colors_logo.png?v=2" />
+
+    <!-- 🔥 GOOGLE FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../icon/colors_logo.png" alt="Colors Brewing Logo" />
+          </a>
+        </div>
+
+        <nav class="nav">
+          <a href="../index.html" data-i18n="nav.home"></a>
+
+          <!-- NUESTRA CARTA -->
+          <div class="dropdown">
+            <a
+              href="nuestra_carta.html"
+              class="dropdown-toggle"
+              data-i18n="nav.our_menu"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="../pages/menu.html" data-i18n="menu.items.menu"></a>
+              <a
+                href="nuestra_carta.html#cervezas"
+                data-i18n="menu.items.craft_beers"
+              ></a>
+              <a
+                href="nuestra_carta.html#especiales"
+                data-i18n="menu.items.special_editions"
+              ></a>
+              <a
+                href="nuestra_carta.html#shots"
+                data-i18n="menu.items.shots"
+              ></a>
+              <a
+                href="nuestra_carta.html#merch"
+                data-i18n="menu.items.merch"
+              ></a>
+            </div>
+          </div>
+
+          <!-- EXPERIENCIAS -->
+          <div class="dropdown">
+            <a
+              href="experiencias.html"
+              class="dropdown-toggle"
+              data-i18n="nav.experiences"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="experiencias.html#tours"
+                data-i18n="experiences.items.brew_tours"
+              ></a>
+              <a
+                href="experiencias.html#eventos"
+                data-i18n="experiences.items.events"
+              ></a>
+              <a
+                href="experiencias.html#reservas"
+                data-i18n="experiences.items.reservations"
+              ></a>
+            </div>
+          </div>
+
+          <!-- MEMBRESÍA -->
+          <div class="dropdown">
+            <a
+              href="membresia.html"
+              class="dropdown-toggle"
+              data-i18n="nav.membership"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="membresia.html#beneficios"
+                data-i18n="membership.items.benefits"
+              ></a>
+              <a
+                href="membresia.html#club"
+                data-i18n="membership.items.club"
+              ></a>
+              <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+            </div>
+          </div>
+
+          <a href="ubicacion.html" data-i18n="nav.location"></a>
+          <a href="contacto.html" data-i18n="nav.contact"></a>
+        </nav>
+
+        <div class="header-right">
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="langBtn">
+              <img src="../icon/bandera-es.png" alt="" />
+              ES
+            </button>
+
+            <div class="lang-menu">
+              <div data-lang="es"><img src="../icon/bandera-es.png" /> ES</div>
+              <div data-lang="en"><img src="../icon/bandera-en.png" /> EN</div>
+            </div>
+          </div>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ✅ MENU MOVIL (FULLSCREEN + BACK) -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <!-- ================= MAIN SCREEN ================= -->
+      <div class="mobile-screen active" id="mainScreen">
+        <a href="../index.html" data-i18n="nav.home"></a>
+
+        <button
+          class="mobile-link"
+          data-target="menuScreen"
+          data-i18n="nav.our_menu"
+        ></button>
+
+        <button
+          class="mobile-link"
+          data-target="expScreen"
+          data-i18n="nav.experiences"
+        ></button>
+
+        <button
+          class="mobile-link"
+          data-target="membershipScreen"
+          data-i18n="nav.membership"
+        ></button>
+
+        <a href="ubicacion.html" data-i18n="nav.location"></a>
+        <a href="contacto.html" data-i18n="nav.contact"></a>
+      </div>
+
+      <!-- ================= NUESTRA CARTA ================= -->
+      <div class="mobile-screen" id="menuScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="nuestra_carta.html"
+            class="mobile-title-link"
+            data-i18n="nav.our_menu"
+          ></a>
+        </div>
+
+        <a href="menu.html" data-i18n="menu.items.menu"></a>
+        <a
+          href="nuestra_carta.html#cervezas"
+          data-i18n="menu.items.craft_beers"
+        ></a>
+        <a
+          href="nuestra_carta.html#especiales"
+          data-i18n="menu.items.special_editions"
+        ></a>
+        <a href="nuestra_carta.html#shots" data-i18n="menu.items.shots"></a>
+        <a href="nuestra_carta.html#merch" data-i18n="menu.items.merch"></a>
+      </div>
+
+      <!-- ================= EXPERIENCIAS ================= -->
+      <div class="mobile-screen" id="expScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="experiencias.html"
+            class="mobile-title-link"
+            data-i18n="nav.experiences"
+          ></a>
+        </div>
+
+        <a
+          href="experiencias.html#tours"
+          data-i18n="experiences.items.brew_tours"
+        ></a>
+        <a
+          href="experiencias.html#eventos"
+          data-i18n="experiences.items.events"
+        ></a>
+        <a
+          href="experiencias.html#reservas"
+          data-i18n="experiences.items.reservations"
+        ></a>
+      </div>
+
+      <!-- ================= MEMBRESÍA ================= -->
+      <div class="mobile-screen" id="membershipScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="membresia.html"
+            class="mobile-title-link"
+            data-i18n="nav.membership"
+          ></a>
+        </div>
+
+        <a
+          href="membresia.html#beneficios"
+          data-i18n="membership.items.benefits"
+        ></a>
+        <a href="membresia.html#club" data-i18n="membership.items.club"></a>
+        <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+      </div>
+    </div>
+    <!-- ================= MAIN ================= -->
+    <main class="signup-main">
+      <!-- 🔥 PANTALLA DE LOGIN (NUEVA) -->
+      <section class="auth-section" id="authSection">
+        <div class="container auth-card">
+          <h2>Accede para inscribirte</h2>
+          <p>Crea una cuenta o inicia sesión para continuar</p>
+          <button id="btnGoogle" class="btn-google">
+            <img src="../icon/google-icon.png" alt="Google" />
+            Continuar con Google
+          </button>
+          <div class="auth-divider"><span>o</span></div>
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">
+              Iniciar sesión
+            </button>
+            <button class="auth-tab" data-tab="register">Registrarse</button>
+          </div>
+          <div class="auth-form" id="tabLogin">
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Correo electrónico"
+            />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Contraseña"
+            />
+            <button id="btnLogin" class="signup-btn">Iniciar sesión</button>
+          </div>
+          <div class="auth-form hidden" id="tabRegister">
+            <input
+              type="email"
+              id="registerEmail"
+              placeholder="Correo electrónico"
+            />
+            <input
+              type="password"
+              id="registerPassword"
+              placeholder="Contraseña (mínimo 6 caracteres)"
+            />
+            <button id="btnRegister" class="signup-btn">Crear cuenta</button>
+          </div>
+          <p id="authError" class="auth-error"></p>
+        </div>
+      </section>
+
+      <!-- INTRO SUPERIOR -->
+      <section class="signup-intro">
+        <div class="container signup-intro-content">
+          <img
+            src="../icon/colors_logo.png"
+            alt="Colors Brewing Logo"
+            class="intro-logo"
+          />
+
+          <h1>Club Colors Brewing</h1>
+
+          <p>
+            Forma parte de nuestra comunidad exclusiva y disfruta lanzamientos
+            especiales, eventos privados y beneficios diseñados para verdaderos
+            amantes de la cerveza artesanal.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN PRINCIPAL -->
+      <section class="signup-wrapper">
+        <div class="container signup-grid">
+          <!-- BENEFICIOS -->
+          <div class="signup-benefits">
+            <h2>Beneficios exclusivos</h2>
+
+            <div class="benefit-item">
+              <div class="benefit-text">
+                🍺 Acceso anticipado a nuevas cervezas
+              </div>
+              <div class="benefit-image">
+                <!-- Aquí puedes poner una imagen después -->
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-text">🎟️ Invitaciones a eventos privados</div>
+              <div class="benefit-image">
+                <!-- Imagen futura -->
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-text">🛍️ Descuentos en merch oficial</div>
+              <div class="benefit-image">
+                <!-- Imagen futura -->
+              </div>
+            </div>
+          </div>
+
+          <!-- FORMULARIO -->
+          <div class="signup-card">
+            <form id="signupForm" class="signup-form">
+              <input
+                type="text"
+                id="fullName"
+                name="full_name"
+                placeholder="Nombre completo"
+                required
+              />
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Correo electrónico"
+                required
+              />
+
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Teléfono"
+                required
+              />
+
+              <input
+                type="date"
+                id="birthdate"
+                name="birthdate"
+                placeholder="Fecha de cumpleaños"
+              />
+
+              <select id="membership" name="membership" required>
+                <option value="">Tipo de membresía</option>
+                <option value="Select">Select</option>
+                <option value="Premium">Premium</option>
+                <option value="Anual">Anual</option>
+              </select>
+
+              <label class="terms">
+                <input type="checkbox" id="terms" required />
+                Acepto los términos y condiciones
+              </label>
+
+              <button type="submit" class="signup-btn">Inscribirme</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SUCCESS OVERLAY -->
+    <div class="success-screen">
+      <div class="success-card">
+        <h2>¡Gracias por inscribirte!</h2>
+
+        <p>Para completar tu inscripción realiza el pago por SINPE:</p>
+
+        <p><strong>A nombre de:</strong> Colors Brewing</p>
+        <p><strong>Número SINPE:</strong> 87331224</p>
+
+        <a id="waBtn" target="_blank" class="success-btn">
+          Enviar comprobante por WhatsApp
+        </a>
+
+        <a href="#" class="back-btn-web"> Cerrar </a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("YbyVZSa0KgmZ4yoG5");
+      })();
+    </script>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- 🔥 FIREBASE AUTH -->
+    <script type="module" src="../js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "our_menu": "Nuestra Carta",
+    "experiences": "Experiencias",
+    "membership": "Membresía",
+    "location": "Ubicación",
+    "contact": "Contacto"
+  },
+
+  "mobile": {
+    "back": "← Volver"
+  },
+
+  "menu": {
+    "items": {
+      "menu": "Menú",
+      "craft_beers": "Cervezas Artesanales",
+      "special_editions": "Ediciones Especiales",
+      "shots": "Shots",
+      "merch": "Merch"
+    }
+  },
+
+  "experiences": {
+    "items": {
+      "brew_tours": "Tours Cerveceros",
+      "events": "Eventos",
+      "reservations": "Reservas"
+    }
+  },
+
+  "membership": {
+    "items": {
+      "benefits": "Beneficios",
+      "club": "Club Colors",
+      "join": "Inscribirme"
+    }
+  },
+
+  "carta": {
+  "hero": {
+    "title": "Nuestra Carta",
+    "subtitle": "Explora nuestras cervezas y ediciones exclusivas"
+  },
+  "section": {
+    "discover": "Descubre"
+  },
+  "cards": {
+    "menu": {
+      "title": "Menú",
+      "text": "Explora nuestra carta completa.",
+      "button": "Ver Menú"
+    },
+    "beers": {
+      "title": "Cervezas Artesanales",
+      "text": "Clásicas, especiales y experimentales.",
+      "button": "Explorar"
+    },
+    "special": {
+      "title": "Ediciones Especiales",
+      "text": "Producciones limitadas y colaboraciones.",
+      "button": "Ver Ediciones"
+    }
+  }
+}
+}
+

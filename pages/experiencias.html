@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiencias | Colors Brewing</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../icon/colors_logo.png?v=2"
+    />
+    <link rel="shortcut icon" href="../icon/colors_logo.png?v=2" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../icon/colors_logo.png" alt="Colors Brewing Logo" />
+          </a>
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav">
+          <a href="../index.html" data-i18n="nav.home"></a>
+
+          <div class="dropdown">
+            <a
+              href="nuestra_carta.html"
+              class="dropdown-toggle"
+              data-i18n="nav.our_menu"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="menu.html" data-i18n="menu.items.menu"></a>
+              <a
+                href="cervezas.html#artesanales"
+                data-i18n="menu.items.craft_beers"
+              ></a>
+              <a
+                href="cervezas.html#especiales"
+                data-i18n="menu.items.special_editions"
+              ></a>
+              <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
+              <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a
+              href="experiencias.html"
+              class="dropdown-toggle"
+              data-i18n="nav.experiences"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="#tours" data-i18n="experiences.items.brew_tours"></a>
+              <a href="#eventos" data-i18n="experiences.items.events"></a>
+              <a href="#reservas" data-i18n="experiences.items.reservations"></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a
+              href="membresia.html"
+              class="dropdown-toggle"
+              data-i18n="nav.membership"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="membresia.html#beneficios"
+                data-i18n="membership.items.benefits"
+              ></a>
+              <a
+                href="membresia.html#club"
+                data-i18n="membership.items.club"
+              ></a>
+              <a
+                href="inscribirme.html"
+                data-i18n="membership.items.join"
+              ></a>
+            </div>
+          </div>
+
+          <a href="ubicacion.html" data-i18n="nav.location"></a>
+          <a href="contacto.html" data-i18n="nav.contact"></a>
+        </nav>
+
+        <div class="header-right">
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="langBtn">
+              <img src="../icon/bandera-es.png" alt="" />
+              ES
+            </button>
+
+            <div class="lang-menu">
+              <div data-lang="es"><img src="../icon/bandera-es.png" /> ES</div>
+              <div data-lang="en"><img src="../icon/bandera-en.png" /> EN</div>
+            </div>
+          </div>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <!-- PANTALLA PRINCIPAL -->
+      <div class="mobile-screen active" id="mainScreen">
+        <a href="../index.html" data-i18n="nav.home"></a>
+
+        <button
+          class="mobile-link"
+          data-target="menuScreen"
+          data-i18n="nav.our_menu"
+        ></button>
+
+        <button
+          class="mobile-link"
+          data-target="expScreen"
+          data-i18n="nav.experiences"
+        ></button>
+
+        <button
+          class="mobile-link"
+          data-target="membershipScreen"
+          data-i18n="nav.membership"
+        ></button>
+
+        <a href="ubicacion.html" data-i18n="nav.location"></a>
+        <a href="contacto.html" data-i18n="nav.contact"></a>
+      </div>
+
+      <!-- SUBPANTALLA NUESTRA CARTA -->
+      <div class="mobile-screen" id="menuScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="nuestra_carta.html"
+            class="mobile-title-link"
+            data-i18n="nav.our_menu"
+          ></a>
+        </div>
+
+        <a href="menu.html" data-i18n="menu.items.menu"></a>
+        <a
+          href="cervezas.html#artesanales"
+          data-i18n="menu.items.craft_beers"
+        ></a>
+        <a
+          href="cervezas.html#especiales"
+          data-i18n="menu.items.special_editions"
+        ></a>
+        <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
+        <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+      </div>
+
+      <!-- SUBPANTALLA EXPERIENCIAS -->
+      <div class="mobile-screen" id="expScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="experiencias.html"
+            class="mobile-title-link"
+            data-i18n="nav.experiences"
+          ></a>
+        </div>
+
+        <a href="#tours" data-i18n="experiences.items.brew_tours"></a>
+        <a href="#eventos" data-i18n="experiences.items.events"></a>
+        <a href="#reservas" data-i18n="experiences.items.reservations"></a>
+      </div>
+
+      <!-- SUBPANTALLA MEMBRESÍA -->
+      <div class="mobile-screen" id="membershipScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+
+          <a
+            href="membresia.html"
+            class="mobile-title-link"
+            data-i18n="nav.membership"
+          ></a>
+        </div>
+
+        <a
+          href="membresia.html#beneficios"
+          data-i18n="membership.items.benefits"
+        ></a>
+        <a href="membresia.html#club" data-i18n="membership.items.club"></a>
+        <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main>
+      <!-- HERO -->
+      <section class="exp-hero">
+        <div class="exp-hero-content">
+          <h1>EXPERIENCIAS</h1>
+          <p>
+            Vive la cerveza artesanal de una manera que nunca olvidarás.
+            Tours, eventos y momentos únicos te esperan en Colors Brewing.
+          </p>
+        </div>
+      </section>
+
+      <!-- INTRO -->
+      <section class="exp-intro">
+        <div class="exp-intro-content">
+          <h2>Más que una cervecería</h2>
+          <p>
+            En Colors Brewing creemos que la cerveza es una excusa para crear
+            momentos memorables. Por eso diseñamos experiencias que van mucho
+            más allá del trago.
+          </p>
+          <p>
+            Desde tours guiados por nuestro proceso de elaboración hasta eventos
+            con música en vivo, tenemos algo especial para cada ocasión.
+          </p>
+        </div>
+      </section>
+
+      <!-- TOURS CERVECEROS -->
+      <section class="exp-tours" id="tours">
+        <h2 class="section-title" data-i18n="experiences.items.brew_tours">Tours Cerveceros</h2>
+
+        <div class="tours-grid">
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="../img/brewery-place.jpg" alt="Tour Express" />
+            </div>
+            <div class="tour-body">
+              <span class="tour-tag">45 min</span>
+              <h3>Tour Express</h3>
+              <p>
+                Recorre las instalaciones y conoce el proceso básico de
+                elaboración de nuestras cervezas artesanales.
+              </p>
+              <ul class="tour-includes">
+                <li>Visita guiada a la sala de producción</li>
+                <li>Degustación de 2 cervezas</li>
+                <li>Explicación del proceso de fermentación</li>
+              </ul>
+              <a href="#reservas" class="exp-btn">Reservar</a>
+            </div>
+          </div>
+
+          <div class="tour-card">
+            <div class="tour-img">
+              <img src="../img/craft-beer.jpg" alt="Tour Completo" />
+            </div>
+            <div class="tour-body">
+              <span class="tour-tag">2 horas</span>
+              <h3>Tour Completo</h3>
+              <p>
+                Una experiencia inmersiva donde aprenderás cada detalle del
+                arte cervecero de Colors Brewing.
+              </p>
+              <ul class="tour-includes">
+                <li>Tour completo de instalaciones</li>
+                <li>Degustación de 5 cervezas</li>
+                <li>Maridaje con snacks</li>
+                <li>Souvenir exclusivo</li>
+              </ul>
+              <a href="#reservas" class="exp-btn">Reservar</a>
+            </div>
+          </div>
+
+          <div class="tour-card featured">
+            <div class="tour-img">
+              <img src="../img/copaprueba.jpg" alt="Tour Maridaje" />
+            </div>
+            <div class="tour-body">
+              <span class="tour-tag">3 horas</span>
+              <h3>Tour Maridaje</h3>
+              <p>
+                La experiencia premium de Colors Brewing. Cata profesional,
+                maridaje gourmet y acceso a nuestra sala privada.
+              </p>
+              <ul class="tour-includes">
+                <li>Cata profesional de 7 cervezas</li>
+                <li>Maridaje gourmet completo</li>
+                <li>Acceso a sala privada</li>
+                <li>Certificado de participación</li>
+                <li>Kit de bienvenida Colors</li>
+              </ul>
+              <a href="#reservas" class="exp-btn">Reservar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENTOS -->
+      <section class="exp-eventos" id="eventos">
+        <h2 class="section-title" data-i18n="experiences.items.events">Eventos</h2>
+
+        <div class="eventos-grid">
+          <div class="evento-card">
+            <div class="evento-date">
+              <span class="evento-day">12</span>
+              <span class="evento-month">MAY</span>
+            </div>
+            <div class="evento-info">
+              <h3>Noche de Jazz & Cerveza</h3>
+              <p>
+                Una velada especial con música jazz en vivo mientras disfrutas
+                de nuestras cervezas artesanales de temporada.
+              </p>
+              <span class="evento-hora">7:00 PM – 11:00 PM</span>
+            </div>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-date">
+              <span class="evento-day">19</span>
+              <span class="evento-month">MAY</span>
+            </div>
+            <div class="evento-info">
+              <h3>Lanzamiento Edición Limitada</h3>
+              <p>
+                Sé el primero en probar nuestra nueva cerveza de temporada.
+                Evento exclusivo para miembros y sus invitados.
+              </p>
+              <span class="evento-hora">6:00 PM – 10:00 PM</span>
+            </div>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-date">
+              <span class="evento-day">26</span>
+              <span class="evento-month">MAY</span>
+            </div>
+            <div class="evento-info">
+              <h3>Taller: Elabora tu Cerveza</h3>
+              <p>
+                Aprende a elaborar tu propia receta con nuestros maestros
+                cerveceros. Incluye insumos y botella con tu etiqueta.
+              </p>
+              <span class="evento-hora">10:00 AM – 2:00 PM</span>
+            </div>
+          </div>
+
+          <div class="evento-card">
+            <div class="evento-date">
+              <span class="evento-day">07</span>
+              <span class="evento-month">JUN</span>
+            </div>
+            <div class="evento-info">
+              <h3>Festival Colors Brewing</h3>
+              <p>
+                Nuestro evento más grande del año. Música, food trucks, más de
+                20 estilos de cerveza y una comunidad apasionada.
+              </p>
+              <span class="evento-hora">12:00 PM – 12:00 AM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESERVAS -->
+      <section class="exp-reservas" id="reservas">
+        <div class="reservas-wrapper">
+          <div class="reservas-info">
+            <h2 data-i18n="experiences.items.reservations">Reservas</h2>
+            <p>
+              ¿Listo para vivir la experiencia Colors? Completa el formulario
+              y nuestro equipo te contactará para confirmar tu reserva.
+            </p>
+            <ul class="reservas-list">
+              <li>Capacidad máxima: 20 personas por tour</li>
+              <li>Edad mínima: 18 años</li>
+              <li>Confirmación en menos de 24 horas</li>
+              <li>Cancelación gratuita hasta 48 horas antes</li>
+            </ul>
+          </div>
+
+          <form class="reservas-form" id="reservasForm">
+            <div class="form-group">
+              <label for="resNombre">Nombre completo</label>
+              <input
+                type="text"
+                id="resNombre"
+                placeholder="Tu nombre"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="resEmail">Correo electrónico</label>
+              <input
+                type="email"
+                id="resEmail"
+                placeholder="tucorreo@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="resTelefono">Teléfono</label>
+              <input
+                type="tel"
+                id="resTelefono"
+                placeholder="+506 0000-0000"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="resTipo">Tipo de experiencia</label>
+              <select id="resTipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="tour-express">Tour Express (45 min)</option>
+                <option value="tour-completo">Tour Completo (2 horas)</option>
+                <option value="tour-maridaje">Tour Maridaje (3 horas)</option>
+                <option value="evento-privado">Evento Privado</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="resFecha">Fecha preferida</label>
+              <input type="date" id="resFecha" required />
+            </div>
+
+            <div class="form-group">
+              <label for="resPersonas">Número de personas</label>
+              <input
+                type="number"
+                id="resPersonas"
+                min="1"
+                max="20"
+                placeholder="1"
+                required
+              />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="resMensaje">Mensaje adicional (opcional)</label>
+              <textarea
+                id="resMensaje"
+                rows="3"
+                placeholder="¿Alguna solicitud especial o pregunta?"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="exp-btn submit-btn">
+              ENVIAR RESERVA
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- SOCIAL FOOTER -->
+    <footer class="social-footer">
+      <div class="card">
+        <a
+          href="https://www.instagram.com/colorsbrewing?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          class="socialContainer containerOne"
+        >
+          <svg class="socialSvg instagramSvg" viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+            ></path>
+          </svg>
+        </a>
+
+        <a href="#" class="socialContainer containerTwo">
+          <svg
+            class="socialSvg tiktokSvg largeIcon"
+            viewBox="0 0 48 48"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title>Tiktok</title>
+            <g
+              id="Icon/Social/tiktok-white"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+            >
+              <path
+                d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z"
+                id="Fill-1"
+                fill="#FFFFFF"
+              ></path>
+            </g>
+          </svg>
+        </a>
+
+        <a
+          href="https://www.facebook.com/share/1MyX6PoxZc/"
+          class="socialContainer containerThree"
+        >
+          <div>
+            <svg
+              class="socialSvg tiktokSvg largeIcon"
+              width="44px"
+              height="44px"
+              viewBox="0 0 45 35"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <title>Facebook</title>
+              <g
+                id="Icon/Social/facebook-black"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  d="M30.0793333,40 L30.0793333,27.608 L34.239,27.608 L34.8616667,22.7783333 L30.0793333,22.7783333 L30.0793333,19.695 C30.0793333,18.2966667 30.4676667,17.344 32.4726667,17.344 L35.0303333,17.3426667 L35.0303333,13.0233333 C34.5876667,12.9646667 33.0696667,12.833 31.3036667,12.833 C27.6163333,12.833 25.0923333,15.0836667 25.0923333,19.2166667 L25.0923333,22.7783333 L20.922,22.7783333 L20.922,27.608 L25.0923333,27.608 L25.0923333,40 L30.0793333,40 Z M9.766,40 C8.79033333,40 8,39.209 8,38.234 L8,9.766 C8,8.79033333 8.79033333,8 9.766,8 L38.2336667,8 C39.209,8 40,8.79033333 40,9.766 L40,38.234 C40,39.209 39.209,40 38.2336667,40 L9.766,40 Z"
+                  id="Shape"
+                  fill="#FFFFFF"
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </a>
+
+        <a href="#" class="socialContainer containerFour">
+          <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
+            <path
+              d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
