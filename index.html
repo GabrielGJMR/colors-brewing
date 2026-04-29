@@ -20,6 +20,9 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- 🔐 AUTH HEADER -->
+    <link rel="stylesheet" href="css/auth-header.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -137,6 +140,12 @@
             </div>
           </div>
 
+          <!-- 🔐 SLOT DE AUTENTICACIÓN (login btn / usuario) -->
+          <div
+            id="authHeaderSlot"
+            style="display: flex; align-items: center; margin-left: 8px"
+          ></div>
+
           <button
             class="menu-toggle"
             id="menuToggle"
@@ -180,6 +189,9 @@
 
         <a href="pages/ubicacion.html" data-i18n="nav.location"></a>
         <a href="pages/contacto.html" data-i18n="nav.contact"></a>
+
+        <!-- 🔐 Login en menú móvil -->
+        <div id="authMobileSlot" style="margin-top: 8px; padding: 0 16px"></div>
       </div>
 
       <!-- SUBPANTALLA NUESTRA CARTA -->
@@ -365,8 +377,8 @@
         </div>
       </section>
     </main>
+
     <!-- 🔥 SOCIAL FOOTER -->
-    <!-- From Uiverse.io by roajuan93 -->
     <footer class="social-footer">
       <div class="card">
         <a
@@ -447,6 +459,7 @@
       </div>
     </footer>
 
+    <script type="module" src="js/auth-header.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
   </body>
