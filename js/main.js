@@ -365,6 +365,58 @@ if (signupForm) {
 }
 
 /* =========================================
+   CONTACT FORM VALIDATION
+========================================= */
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  const contactSuccess = document.getElementById("formSuccess");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let valid = true;
+
+    const campos = [
+      { id: "nombre", errorId: "errorNombre", msg: "El nombre es requerido." },
+      { id: "email", errorId: "errorEmail", msg: "Ingresá un correo válido." },
+      { id: "asunto", errorId: "errorAsunto", msg: "El asunto es requerido." },
+      { id: "mensaje", errorId: "errorMensaje", msg: "El mensaje no puede estar vacío." },
+    ];
+
+    campos.forEach(({ id, errorId, msg }) => {
+      const input = document.getElementById(id);
+      const error = document.getElementById(errorId);
+      const val = input.value.trim();
+
+      if (!val || (id === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val))) {
+        error.textContent = msg;
+        input.classList.add("input-error");
+        valid = false;
+      } else {
+        error.textContent = "";
+        input.classList.remove("input-error");
+      }
+    });
+
+    if (valid) {
+      contactSuccess.style.display = "block";
+      contactForm.reset();
+      setTimeout(() => (contactSuccess.style.display = "none"), 4000);
+    }
+  });
+
+  ["nombre", "email", "asunto", "mensaje"].forEach((id) => {
+    document.getElementById(id).addEventListener("input", function () {
+      document.getElementById(
+        "error" + id.charAt(0).toUpperCase() + id.slice(1),
+      ).textContent = "";
+      this.classList.remove("input-error");
+    });
+  });
+}
+
+/* =========================================
    CERRAR SUCCESS OVERLAY
 ========================================= */
 
