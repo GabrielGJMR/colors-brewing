@@ -1,5 +1,5 @@
 /* =========================================
-   MENU COMIDA - COLORS BREWING
+   MENU - COLORS BREWING
 ========================================= */
 
 .menu-main {
@@ -19,32 +19,65 @@
 .menu-hero h1 {
   font-size: 2.8rem;
   color: var(--primary);
-  margin-bottom: 15px;
-}
-
-.menu-hero p {
-  max-width: 600px;
-  margin: 0 auto;
-  opacity: 0.9;
+  margin-bottom: 24px;
+  font-family: "Baloo 2", sans-serif;
 }
 
 /* =========================================
-   SECCIONES
+   BÚSQUEDA
 ========================================= */
 
-.menu-section {
-  padding: 70px 0;
+.menu-search-bar {
+  max-width: 560px;
+  margin: 0 auto;
 }
 
-.alt-bg {
+.menu-search-bar input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-family: "Baloo 2", sans-serif;
   background: var(--dark-light);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.menu-section h2 {
-  text-align: center;
-  margin-bottom: 50px;
+.menu-search-bar input::placeholder {
+  opacity: 0.45;
+}
+
+.menu-search-bar input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(196, 154, 44, 0.15);
+}
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.menu-content {
+  padding-top: 20px;
+}
+
+/* =========================================
+   CATEGORÍA
+========================================= */
+
+.menu-category {
+  margin-bottom: 64px;
+}
+
+.menu-category-title {
+  font-size: 1.6rem;
+  font-family: "Baloo 2", sans-serif;
   color: var(--primary);
-  font-size: 1.9rem;
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+  display: inline-block;
 }
 
 /* =========================================
@@ -53,73 +86,97 @@
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 /* =========================================
-   CARD
+   TARJETA
 ========================================= */
 
-.menu-item {
+.menu-card {
   background: var(--dark-light);
-  border-radius: 18px;
-  overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.menu-item:hover {
+.menu-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
 }
 
-/* =========================================
-   IMAGE
-========================================= */
-
-.menu-img {
-  height: 230px;
-  overflow: hidden;
-}
-
-.menu-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.menu-item:hover .menu-img img {
-  transform: scale(1.06);
-}
-
-/* =========================================
-   INFO
-========================================= */
-
-.menu-info {
-  padding: 22px;
-}
-
-.menu-info h3 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-}
-
-.menu-info p {
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-
-.price {
-  color: var(--primary);
+.menu-card-name {
+  font-size: 1.05rem;
+  font-family: "Baloo 2", sans-serif;
   font-weight: 700;
-  font-size: 1.15rem;
+  color: #fff;
+  margin: 0;
+}
+
+.menu-card-desc {
+  font-size: 0.88rem;
+  opacity: 0.65;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.menu-card-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+/* =========================================
+   FILTROS DE CATEGORÍA
+========================================= */
+
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.menu-filter-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.menu-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.menu-filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+  font-weight: 700;
+}
+
+/* =========================================
+   SIN RESULTADOS
+========================================= */
+
+#noResults {
+  font-size: 1rem;
+  opacity: 0.55;
+  font-family: "Baloo 2", sans-serif;
 }
 
 /* =========================================
@@ -135,11 +192,17 @@
     font-size: 2.2rem;
   }
 
-  .menu-section {
-    padding: 50px 0;
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
   }
 
-  .menu-img {
-    height: 200px;
+  .menu-category-title {
+    font-size: 1.35rem;
   }
 }

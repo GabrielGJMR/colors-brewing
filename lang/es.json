@@ -52,15 +52,10 @@
       "text": "Explora nuestra carta completa.",
       "button": "Ver Menú"
     },
-    "beers": {
-      "title": "Cervezas Artesanales",
-      "text": "Clásicas, especiales y experimentales.",
-      "button": "Explorar"
-    },
-    "special": {
-      "title": "Ediciones Especiales",
-      "text": "Producciones limitadas y colaboraciones.",
-      "button": "Ver Ediciones"
+    "merch": {
+      "title": "Merch",
+      "text": "Llevá Colors Brewing con vos.",
+      "button": "Ver Merch"
     }
   }
 }

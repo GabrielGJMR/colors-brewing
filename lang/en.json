@@ -52,15 +52,10 @@
         "text": "Explore our complete menu.",
         "button": "View Menu"
       },
-      "beers": {
-        "title": "Craft Beers",
-        "text": "Classic, special and experimental.",
-        "button": "Explore"
-      },
-      "special": {
-        "title": "Special Editions",
-        "text": "Limited productions and collaborations.",
-        "button": "View Editions"
+      "merch": {
+        "title": "Merch",
+        "text": "Take Colors Brewing with you.",
+        "button": "View Merch"
       }
     }
   }

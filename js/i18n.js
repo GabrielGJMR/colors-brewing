@@ -1,5 +1,5 @@
 const defaultLang = "es";
-let currentLang = localStorage.getItem("language") || defaultLang;
+let currentLang = localStorage.getItem("lang") || defaultLang;
 
 /* ============================= */
 /* Resolver ruta dinámica idioma */
@@ -45,7 +45,7 @@ async function loadLanguage(lang) {
       }
     });
 
-    localStorage.setItem("language", lang);
+    localStorage.setItem("lang", lang);
     currentLang = lang;
     document.documentElement.lang = lang;
 

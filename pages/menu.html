@@ -20,6 +20,7 @@
     />
 
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
   </head>
 
   <body>
@@ -45,23 +46,8 @@
             <span class="arrow">▾</span>
 
             <div class="dropdown-menu">
-              <a href="nuestra_carta.html#menu" data-i18n="menu.items.menu"></a>
-              <a
-                href="nuestra_carta.html#cervezas"
-                data-i18n="menu.items.craft_beers"
-              ></a>
-              <a
-                href="nuestra_carta.html#especiales"
-                data-i18n="menu.items.special_editions"
-              ></a>
-              <a
-                href="nuestra_carta.html#shots"
-                data-i18n="menu.items.shots"
-              ></a>
-              <a
-                href="nuestra_carta.html#merch"
-                data-i18n="menu.items.merch"
-              ></a>
+              <a href="menu.html" data-i18n="menu.items.menu"></a>
+              <a href="merch.html" data-i18n="menu.items.merch"></a>
             </div>
           </div>
 
@@ -129,6 +115,9 @@
             </div>
           </div>
 
+          <!-- 🔒 SLOT AUTH -->
+          <div id="authHeaderSlot" style="display:flex;align-items:center;margin-left:8px;"></div>
+
           <button
             class="menu-toggle"
             id="menuToggle"
@@ -191,17 +180,8 @@
           ></a>
         </div>
 
-        <a href="nuestra_carta.html#menu" data-i18n="menu.items.menu"></a>
-        <a
-          href="nuestra_carta.html#cervezas"
-          data-i18n="menu.items.craft_beers"
-        ></a>
-        <a
-          href="nuestra_carta.html#especiales"
-          data-i18n="menu.items.special_editions"
-        ></a>
-        <a href="nuestra_carta.html#shots" data-i18n="menu.items.shots"></a>
-        <a href="nuestra_carta.html#merch" data-i18n="menu.items.merch"></a>
+        <a href="menu.html" data-i18n="menu.items.menu"></a>
+        <a href="merch.html" data-i18n="menu.items.merch"></a>
       </div>
 
       <!-- EXPERIENCIAS MOBILE -->
@@ -263,97 +243,222 @@
 
     <!-- ================= MAIN ================= -->
     <main class="menu-main">
-      <!-- HERO -->
+
+      <!-- HERO + BÚSQUEDA -->
       <section class="menu-hero">
         <div class="container">
-          <h1>Menú de Comida</h1>
-          <p>Sabores intensos para acompañar nuestras cervezas artesanales</p>
-        </div>
-      </section>
+          <h1>Nuestro Menú</h1>
+          <div class="menu-search-bar">
+            <input
+              type="text"
+              id="menuSearch"
+              placeholder="Buscar producto..."
+              autocomplete="off"
+            />
+          </div>
 
-      <!-- ENTRADAS -->
-      <section class="menu-section">
-        <div class="container">
-          <h2>Entradas</h2>
-
-          <div class="menu-grid">
-            <div class="menu-item">
-              <div class="menu-img">
-                <img src="../img/food/nachos.jpg" alt="Nachos Artesanales" />
-              </div>
-              <div class="menu-info">
-                <h3>Nachos Artesanales</h3>
-                <p>Nachos crujientes con queso fundido y jalapeños.</p>
-                <span class="price">₡4,500</span>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <div class="menu-img">
-                <img src="../img/food/alitas.jpg" alt="Alitas BBQ" />
-              </div>
-              <div class="menu-info">
-                <h3>Alitas BBQ</h3>
-                <p>Alitas bañadas en salsa BBQ ahumada.</p>
-                <span class="price">₡6,200</span>
-              </div>
-            </div>
+          <div class="menu-filters">
+            <button class="menu-filter-btn active" data-filter="all">Todos</button>
+            <button class="menu-filter-btn" data-filter="en-tap">En Tap</button>
+            <button class="menu-filter-btn" data-filter="en-lata">En Lata</button>
+            <button class="menu-filter-btn" data-filter="cocteles">Cócteles</button>
+            <button class="menu-filter-btn" data-filter="cocteles-sin-alcohol">Sin Alcohol</button>
+            <button class="menu-filter-btn" data-filter="shots">Shots</button>
+            <button class="menu-filter-btn" data-filter="vinos">Vinos</button>
+            <button class="menu-filter-btn" data-filter="tragos">Tragos</button>
+            <button class="menu-filter-btn" data-filter="cerveza-comercial">Cerveza Comercial</button>
+            <button class="menu-filter-btn" data-filter="batidos">Batidos</button>
+            <button class="menu-filter-btn" data-filter="gaseosas">Gaseosas</button>
           </div>
         </div>
       </section>
 
-      <!-- HAMBURGUESAS -->
-      <section class="menu-section alt-bg">
-        <div class="container">
-          <h2>Hamburguesas</h2>
+      <!-- CONTENIDO -->
+      <div class="menu-content container">
 
+        <!-- EN TAP -->
+        <section class="menu-category" id="en-tap">
+          <h2 class="menu-category-title">En Tap</h2>
           <div class="menu-grid">
-            <div class="menu-item">
-              <div class="menu-img">
-                <img src="../img/food/burger1.jpg" alt="Classic Brew Burger" />
-              </div>
-              <div class="menu-info">
-                <h3>Classic Brew Burger</h3>
-                <p>Carne 100% res, queso cheddar y salsa especial.</p>
-                <span class="price">₡7,500</span>
-              </div>
-            </div>
-
-            <div class="menu-item">
-              <div class="menu-img">
-                <img src="../img/food/burger2.jpg" alt="Premium Dark Burger" />
-              </div>
-              <div class="menu-info">
-                <h3>Premium Dark Burger</h3>
-                <p>Carne angus con cebolla caramelizada.</p>
-                <span class="price">₡8,200</span>
-              </div>
-            </div>
+            <div class="menu-card"><h3 class="menu-card-name">Strong Ale</h3><p class="menu-card-desc">Cerveza Fuerte</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Hidromiel</h3><p class="menu-card-desc">Tamarindo y Chile panameño</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Sidra de Cas y Maracuyá</h3><p class="menu-card-desc">Sidra de Cas y Maracuya</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Colors Stout</h3><p class="menu-card-desc">Stout</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Aguacero</h3><p class="menu-card-desc">IPA</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Hibiscus Ale</h3><p class="menu-card-desc">Pale Ale</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Barbara</h3><p class="menu-card-desc">APA</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Pócima</h3><p class="menu-card-desc">Catharina Sour</p><span class="menu-card-price">₡3.500</span></div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- POSTRES -->
-      <section class="menu-section">
-        <div class="container">
-          <h2>Postres</h2>
-
+        <!-- EN LATA -->
+        <section class="menu-category" id="en-lata">
+          <h2 class="menu-category-title">En Lata</h2>
           <div class="menu-grid">
-            <div class="menu-item">
-              <div class="menu-img">
-                <img src="../img/food/brownie.jpg" alt="Brownie Stout" />
-              </div>
-              <div class="menu-info">
-                <h3>Brownie Stout</h3>
-                <p>Brownie de chocolate oscuro con helado de vainilla.</p>
-                <span class="price">₡3,800</span>
-              </div>
-            </div>
+            <div class="menu-card"><h3 class="menu-card-name">Cerveza con Flor de Jamaica</h3><p class="menu-card-desc">Cerveza con Flor de Jamaica</p><span class="menu-card-price">₡2.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Aguacero</h3><p class="menu-card-desc">IPA</p><span class="menu-card-price">₡2.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Stout</h3><p class="menu-card-desc">Stout</p><span class="menu-card-price">₡2.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Bárbara</h3><p class="menu-card-desc">APA</p><span class="menu-card-price">₡2.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Pócima Sour</h3><p class="menu-card-desc">Ácida con Pitahaya</p><span class="menu-card-price">₡2.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Sidra de Cas y Maracuyá</h3><p class="menu-card-desc">Bebida fermentada a base de Cas y maracuyá</p><span class="menu-card-price">₡2.800</span></div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- CÓCTELES -->
+        <section class="menu-category" id="cocteles">
+          <h2 class="menu-category-title">Cócteles</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Mint Julep</h3><p class="menu-card-desc">Bourbon, Yerbabuena y azúcar</p><span class="menu-card-price">₡3.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Amaretto Sour</h3><p class="menu-card-desc">Licor de Almendras, Limón y espumante</p><span class="menu-card-price">₡3.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Daiquiri Clásico</h3><p class="menu-card-desc">Ron, Jugo de limón y azúcar</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Piña Colada</h3><p class="menu-card-desc">Ron blanco, crema de coco y piña</p><span class="menu-card-price">₡3.700</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Mojito</h3><p class="menu-card-desc">Ron blanco, jugo de limón, azúcar, hierba buena y soda</p><span class="menu-card-price">₡3.700</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Sangría</h3><p class="menu-card-desc">Licor de naranja, vino tinto, cerveza de jengibre y jugo de naranja</p><span class="menu-card-price">₡3.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Tico Sour</h3><p class="menu-card-desc">Cacique, jugo de limón y azúcar</p><span class="menu-card-price">₡3.700</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Gin & Tonic</h3><p class="menu-card-desc">Gin y agua tónica (clásico, frutos rojos, pepino, maracuyá)</p><span class="menu-card-price">₡4.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Daiquiri Frozen de Frutas</h3><p class="menu-card-desc">Ron, jugo de limón y azúcar con fruta a elegir</p><span class="menu-card-price">₡3.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Margarita</h3><p class="menu-card-desc">Tequila Blanco, Licor de Naranja, jugo de limón y azúcar (con hielo, sin hielo, frozen)</p><span class="menu-card-price">₡3.800</span></div>
+          </div>
+        </section>
+
+        <!-- CÓCTELES SIN ALCOHOL -->
+        <section class="menu-category" id="cocteles-sin-alcohol">
+          <h2 class="menu-category-title">Cócteles sin Alcohol</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Piña Colada</h3><p class="menu-card-desc">Piña Colada virgen (sin alcohol)</p><span class="menu-card-price">₡2.500</span></div>
+          </div>
+        </section>
+
+        <!-- SHOTS -->
+        <section class="menu-category" id="shots">
+          <h2 class="menu-category-title">Shots</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Licor de Naranja Casero</h3><p class="menu-card-desc">3oz de Licor de Naranja hecho en casa</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Rompope</h3><p class="menu-card-desc">Rompope Casero tipo Baileys</p><span class="menu-card-price">₡1.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Chiliguaro 2x1</h3><p class="menu-card-desc">Chiliguaro 2x1</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Chiliguaro</h3><p class="menu-card-desc">Clásico picante con jugo de tomate y cacique</p><span class="menu-card-price">₡1.500</span></div>
+          </div>
+        </section>
+
+        <!-- VINOS -->
+        <section class="menu-category" id="vinos">
+          <h2 class="menu-category-title">Vinos</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Botella Vino Blanco Espumoso</h3><p class="menu-card-desc">750ml Moscato</p><span class="menu-card-price">₡11.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Botella de Vino Rosado</h3><p class="menu-card-desc">750ml Tempranillo</p><span class="menu-card-price">₡10.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Botella de Vino Blanco</h3><p class="menu-card-desc">750ml Blanco</p><span class="menu-card-price">₡10.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Botella de Vino Tinto</h3><p class="menu-card-desc">750ml Rouge Moelleux</p><span class="menu-card-price">₡10.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Copa de Vino Blanco</h3><p class="menu-card-desc">5 onzas de vino blanco en copa</p><span class="menu-card-price">₡2.900</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Copa de Vino Tinto</h3><p class="menu-card-desc">5 onzas de vino tinto en copa</p><span class="menu-card-price">₡2.800</span></div>
+          </div>
+        </section>
+
+        <!-- TRAGOS -->
+        <section class="menu-category" id="tragos">
+          <h2 class="menu-category-title">Tragos</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Smirnoff</h3><p class="menu-card-desc">Vodka Smirnoff</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Jarana Blanco</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Bacardi Blanco</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Guaro Cacique</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡1.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Jim Beam</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡4.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Cointreau</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡5.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Aperol</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡3.300</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Gin Hendricks</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡4.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Campari</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡3.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Vodka Artesanal Titos</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡5.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Flor de Caña 12 años</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡4.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Whiskey Old Parr</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡4.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Mezcal Montelobos</h3><p class="menu-card-desc">2oz</p><span class="menu-card-price">₡9.000</span></div>
+          </div>
+        </section>
+
+        <!-- CERVEZA COMERCIAL -->
+        <section class="menu-category" id="cerveza-comercial">
+          <h2 class="menu-category-title">Cerveza Comercial</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Imperial Light</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡1.800</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Corona</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡2.500</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Pilsen</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡1.800</span></div>
+          </div>
+        </section>
+
+        <!-- BATIDOS NATURALES -->
+        <section class="menu-category" id="batidos">
+          <h2 class="menu-category-title">Batidos Naturales</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Guanaba</h3><p class="menu-card-desc">Guanaba</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Sandía</h3><p class="menu-card-desc">Batido frozen de sandia</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Mango</h3><p class="menu-card-desc">Batido frozen de mango</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Piña</h3><p class="menu-card-desc">Batido frozen de piña</p><span class="menu-card-price">₡2.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Fresa</h3><p class="menu-card-desc">Batido Frozen de Fresa</p><span class="menu-card-price">₡2.000</span></div>
+          </div>
+        </section>
+
+        <!-- GASEOSAS -->
+        <section class="menu-category" id="gaseosas">
+          <h2 class="menu-category-title">Gaseosas</h2>
+          <div class="menu-grid">
+            <div class="menu-card"><h3 class="menu-card-name">Fresca</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡1.000</span></div>
+            <div class="menu-card"><h3 class="menu-card-name">Coca Cola</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡1.500</span></div>
+          </div>
+        </section>
+
+        <!-- SIN RESULTADOS -->
+        <p id="noResults" style="display:none; text-align:center; padding:3rem; opacity:0.6;">Sin resultados</p>
+
+      </div>
     </main>
 
+    <script type="module" src="../js/auth-header.js"></script>
+    <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <script>
+      const searchInput = document.getElementById("menuSearch");
+      const noResults = document.getElementById("noResults");
+      const filterBtns = document.querySelectorAll(".menu-filter-btn");
+
+      let activeFilter = "all";
+
+      function applyFilters() {
+        const query = searchInput.value.trim().toLowerCase();
+        let anyVisible = false;
+
+        document.querySelectorAll(".menu-category").forEach((category) => {
+          const categoryId = category.id;
+          const categoryMatches = activeFilter === "all" || activeFilter === categoryId;
+
+          if (!categoryMatches) {
+            category.style.display = "none";
+            return;
+          }
+
+          let categoryHasMatch = false;
+          category.querySelectorAll(".menu-card").forEach((card) => {
+            const name = card.querySelector(".menu-card-name").textContent.toLowerCase();
+            const desc = card.querySelector(".menu-card-desc").textContent.toLowerCase();
+            const matches = !query || name.includes(query) || desc.includes(query);
+            card.style.display = matches ? "" : "none";
+            if (matches) categoryHasMatch = true;
+          });
+
+          category.style.display = categoryHasMatch ? "" : "none";
+          if (categoryHasMatch) anyVisible = true;
+        });
+
+        noResults.style.display = anyVisible ? "none" : "block";
+      }
+
+      searchInput.addEventListener("input", applyFilters);
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          activeFilter = this.dataset.filter;
+          applyFilters();
+        });
+      });
+    </script>
   </body>
 </html>

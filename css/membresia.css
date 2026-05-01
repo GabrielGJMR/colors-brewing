@@ -12,7 +12,7 @@
 }
 
 .membership-hero-content h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--primary);
   margin-bottom: 1rem;
   opacity: 0;
@@ -234,7 +234,7 @@
 
 @media (min-width: 900px) {
   .membership-hero-content h1 {
-    font-size: 4rem;
+    font-size: 2.8rem;
   }
 
   .benefits-grid {

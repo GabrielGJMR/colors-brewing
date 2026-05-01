@@ -45,16 +45,7 @@
 
             <div class="dropdown-menu">
               <a href="menu.html" data-i18n="menu.items.menu"></a>
-              <a
-                href="cervezas.html#artesanales"
-                data-i18n="menu.items.craft_beers"
-              ></a>
-              <a
-                href="cervezas.html#especiales"
-                data-i18n="menu.items.special_editions"
-              ></a>
-              <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
-              <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+              <a href="merch.html" data-i18n="menu.items.merch"></a>
             </div>
           </div>
 
@@ -113,6 +104,9 @@
               <div data-lang="en"><img src="../icon/bandera-en.png" /> EN</div>
             </div>
           </div>
+
+          <!-- 🔒 SLOT AUTH -->
+          <div id="authHeaderSlot" style="display:flex;align-items:center;margin-left:8px;"></div>
 
           <button
             class="menu-toggle"
@@ -174,16 +168,7 @@
         </div>
 
         <a href="menu.html" data-i18n="menu.items.menu"></a>
-        <a
-          href="cervezas.html#artesanales"
-          data-i18n="menu.items.craft_beers"
-        ></a>
-        <a
-          href="cervezas.html#especiales"
-          data-i18n="menu.items.special_editions"
-        ></a>
-        <a href="cervezas.html#shots" data-i18n="menu.items.shots"></a>
-        <a href="cervezas.html#merch" data-i18n="menu.items.merch"></a>
+        <a href="merch.html" data-i18n="menu.items.merch"></a>
       </div>
 
       <!-- SUBPANTALLA EXPERIENCIAS -->
@@ -574,6 +559,7 @@
       </div>
     </footer>
 
+    <script type="module" src="../js/auth-header.js"></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
   </body>
