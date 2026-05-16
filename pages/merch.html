@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merch | Colors Brewing</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../icon/colors_logo.png?v=2"
+    />
+    <link rel="shortcut icon" href="../icon/colors_logo.png?v=2" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../icon/colors_logo.png" alt="Colors Brewing Logo" />
+          </a>
+        </div>
+
+        <!-- NAV DESKTOP -->
+        <nav class="nav">
+          <a href="../index.html" data-i18n="nav.home"></a>
+
+          <div class="dropdown">
+            <a
+              href="nuestra_carta.html"
+              class="dropdown-toggle"
+              data-i18n="nav.our_menu"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a href="menu.html" data-i18n="menu.items.menu"></a>
+              <a href="merch.html" data-i18n="menu.items.merch"></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a
+              href="experiencias.html"
+              class="dropdown-toggle"
+              data-i18n="nav.experiences"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="experiencias.html#tours"
+                data-i18n="experiences.items.brew_tours"
+              ></a>
+              <a
+                href="experiencias.html#eventos"
+                data-i18n="experiences.items.events"
+              ></a>
+              <a
+                href="experiencias.html#reservas"
+                data-i18n="experiences.items.reservations"
+              ></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a
+              href="membresia.html"
+              class="dropdown-toggle"
+              data-i18n="nav.membership"
+            ></a>
+            <span class="arrow">▾</span>
+
+            <div class="dropdown-menu">
+              <a
+                href="membresia.html#beneficios"
+                data-i18n="membership.items.benefits"
+              ></a>
+              <a
+                href="membresia.html#club"
+                data-i18n="membership.items.club"
+              ></a>
+              <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+            </div>
+          </div>
+
+          <a href="ubicacion.html" data-i18n="nav.location"></a>
+          <a href="contacto.html" data-i18n="nav.contact"></a>
+        </nav>
+
+        <!-- RIGHT SIDE -->
+        <div class="header-right">
+          <div class="lang-dropdown">
+            <button class="lang-btn" id="langBtn">
+              <img src="../icon/bandera-es.png" alt="" />
+              ES
+            </button>
+
+            <div class="lang-menu">
+              <div data-lang="es"><img src="../icon/bandera-es.png" /> ES</div>
+              <div data-lang="en"><img src="../icon/bandera-en.png" /> EN</div>
+            </div>
+          </div>
+
+          <!-- 🔐 SLOT AUTH -->
+          <div
+            id="authHeaderSlot"
+            style="display: flex; align-items: center; margin-left: 8px"
+          ></div>
+
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-screen active" id="mainScreen">
+        <a
+          href="../index.html"
+          data-i18n="nav.home"
+          style="text-transform: uppercase"
+        ></a>
+
+        <button
+          class="mobile-link"
+          data-target="menuScreen"
+          data-i18n="nav.our_menu"
+          style="text-transform: uppercase"
+        ></button>
+        <button
+          class="mobile-link"
+          data-target="expScreen"
+          data-i18n="nav.experiences"
+          style="text-transform: uppercase"
+        ></button>
+        <button
+          class="mobile-link"
+          data-target="membershipScreen"
+          data-i18n="nav.membership"
+          style="text-transform: uppercase"
+        ></button>
+
+        <a
+          href="ubicacion.html"
+          data-i18n="nav.location"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="contacto.html"
+          data-i18n="nav.contact"
+          style="text-transform: uppercase"
+        ></a>
+      </div>
+
+      <div class="mobile-screen" id="menuScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+            style="text-transform: uppercase"
+          ></button>
+          <a
+            href="nuestra_carta.html"
+            class="mobile-title-link"
+            data-i18n="nav.our_menu"
+            style="text-transform: uppercase"
+          ></a>
+        </div>
+
+        <a
+          href="menu.html"
+          data-i18n="menu.items.menu"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="merch.html"
+          data-i18n="menu.items.merch"
+          style="text-transform: uppercase"
+        ></a>
+      </div>
+
+      <div class="mobile-screen" id="expScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+            style="text-transform: uppercase"
+          ></button>
+          <a
+            href="experiencias.html"
+            class="mobile-title-link"
+            data-i18n="nav.experiences"
+          ></a>
+        </div>
+
+        <a
+          href="experiencias.html#tours"
+          data-i18n="experiences.items.brew_tours"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="experiencias.html#eventos"
+          data-i18n="experiences.items.events"
+          style="text-transform: uppercase"
+        ></a>
+        <a
+          href="experiencias.html#reservas"
+          data-i18n="experiences.items.reservations"
+          style="text-transform: uppercase"
+        ></a>
+      </div>
+
+      <div class="mobile-screen" id="membershipScreen">
+        <div class="mobile-screen-header">
+          <button
+            class="back-btn"
+            type="button"
+            data-back="mainScreen"
+            data-i18n="mobile.back"
+          ></button>
+          <a
+            href="membresia.html"
+            class="mobile-title-link"
+            data-i18n="nav.membership"
+          ></a>
+        </div>
+
+        <a
+          href="membresia.html#beneficios"
+          data-i18n="membership.items.benefits"
+        ></a>
+        <a href="membresia.html#club" data-i18n="membership.items.club"></a>
+        <a href="inscribirme.html" data-i18n="membership.items.join"></a>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="menu-main">
+
+      <!-- HERO + BÚSQUEDA -->
+      <section class="menu-hero">
+        <div class="container">
+          <h1>Merch</h1>
+          <div class="menu-search-bar">
+            <input
+              type="text"
+              id="merchSearch"
+              placeholder="Buscar producto..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- PRODUCTOS -->
+      <div class="menu-content container">
+        <div class="menu-grid" id="merchGrid">
+          <div class="menu-card"><h3 class="menu-card-name">Camisa</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡15.000</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Gorras</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡15.000</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Rompecabezas</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡17.000</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Stickers</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡600</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Broches</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡2.500</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Imanes</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡2.500</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Bolsos</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡18.000</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Paper Prints</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡10.000</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Lienzos</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡12.000</span></div>
+          <div class="menu-card"><h3 class="menu-card-name">Sticker Pack</h3><p class="menu-card-desc">—</p><span class="menu-card-price">₡7.500</span></div>
+        </div>
+
+        <p id="noResults">Sin resultados</p>
+      </div>
+    </main>
+
+    <script type="module" src="../js/auth-header.js"></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

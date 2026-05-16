@@ -174,8 +174,11 @@
 ========================================= */
 
 #noResults {
+  display: none;
+  text-align: center;
+  padding: 3rem;
   font-size: 1rem;
-  opacity: 0.55;
+  opacity: 0.6;
   font-family: "Baloo 2", sans-serif;
 }
 

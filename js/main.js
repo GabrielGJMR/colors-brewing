@@ -365,6 +365,81 @@ if (signupForm) {
 }
 
 /* =========================================
+   MENU SEARCH + CATEGORY FILTER
+========================================= */
+
+const menuSearch = document.getElementById("menuSearch");
+
+if (menuSearch) {
+  const menuNoResults = document.getElementById("noResults");
+  const filterBtns = document.querySelectorAll(".menu-filter-btn");
+  let activeFilter = "all";
+
+  function applyMenuFilters() {
+    const query = menuSearch.value.trim().toLowerCase();
+    let anyVisible = false;
+
+    document.querySelectorAll(".menu-category").forEach((category) => {
+      const categoryMatches = activeFilter === "all" || activeFilter === category.id;
+
+      if (!categoryMatches) {
+        category.style.display = "none";
+        return;
+      }
+
+      let categoryHasMatch = false;
+      category.querySelectorAll(".menu-card").forEach((card) => {
+        const name = card.querySelector(".menu-card-name").textContent.toLowerCase();
+        const desc = card.querySelector(".menu-card-desc").textContent.toLowerCase();
+        const matches = !query || name.includes(query) || desc.includes(query);
+        card.style.display = matches ? "" : "none";
+        if (matches) categoryHasMatch = true;
+      });
+
+      category.style.display = categoryHasMatch ? "" : "none";
+      if (categoryHasMatch) anyVisible = true;
+    });
+
+    menuNoResults.style.display = anyVisible ? "none" : "block";
+  }
+
+  menuSearch.addEventListener("input", applyMenuFilters);
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
+      activeFilter = this.dataset.filter;
+      applyMenuFilters();
+    });
+  });
+}
+
+/* =========================================
+   MERCH SEARCH
+========================================= */
+
+const merchSearch = document.getElementById("merchSearch");
+
+if (merchSearch) {
+  const merchNoResults = document.getElementById("noResults");
+
+  merchSearch.addEventListener("input", function () {
+    const query = this.value.trim().toLowerCase();
+    let anyVisible = false;
+
+    document.querySelectorAll("#merchGrid .menu-card").forEach((card) => {
+      const name = card.querySelector(".menu-card-name").textContent.toLowerCase();
+      const matches = !query || name.includes(query);
+      card.style.display = matches ? "" : "none";
+      if (matches) anyVisible = true;
+    });
+
+    merchNoResults.style.display = anyVisible || !query ? "none" : "block";
+  });
+}
+
+/* =========================================
    CONTACT FORM VALIDATION
 ========================================= */
 

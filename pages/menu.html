@@ -20,7 +20,6 @@
     />
 
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/menu.css" />
   </head>
 
   <body>
@@ -405,7 +404,7 @@
         </section>
 
         <!-- SIN RESULTADOS -->
-        <p id="noResults" style="display:none; text-align:center; padding:3rem; opacity:0.6;">Sin resultados</p>
+        <p id="noResults">Sin resultados</p>
 
       </div>
     </main>
@@ -413,52 +412,5 @@
     <script type="module" src="../js/auth-header.js"></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
-    <script>
-      const searchInput = document.getElementById("menuSearch");
-      const noResults = document.getElementById("noResults");
-      const filterBtns = document.querySelectorAll(".menu-filter-btn");
-
-      let activeFilter = "all";
-
-      function applyFilters() {
-        const query = searchInput.value.trim().toLowerCase();
-        let anyVisible = false;
-
-        document.querySelectorAll(".menu-category").forEach((category) => {
-          const categoryId = category.id;
-          const categoryMatches = activeFilter === "all" || activeFilter === categoryId;
-
-          if (!categoryMatches) {
-            category.style.display = "none";
-            return;
-          }
-
-          let categoryHasMatch = false;
-          category.querySelectorAll(".menu-card").forEach((card) => {
-            const name = card.querySelector(".menu-card-name").textContent.toLowerCase();
-            const desc = card.querySelector(".menu-card-desc").textContent.toLowerCase();
-            const matches = !query || name.includes(query) || desc.includes(query);
-            card.style.display = matches ? "" : "none";
-            if (matches) categoryHasMatch = true;
-          });
-
-          category.style.display = categoryHasMatch ? "" : "none";
-          if (categoryHasMatch) anyVisible = true;
-        });
-
-        noResults.style.display = anyVisible ? "none" : "block";
-      }
-
-      searchInput.addEventListener("input", applyFilters);
-
-      filterBtns.forEach((btn) => {
-        btn.addEventListener("click", function () {
-          filterBtns.forEach((b) => b.classList.remove("active"));
-          this.classList.add("active");
-          activeFilter = this.dataset.filter;
-          applyFilters();
-        });
-      });
-    </script>
   </body>
 </html>
